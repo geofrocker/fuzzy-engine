@@ -1,0 +1,50 @@
+
+.box{
+  border: solid black 1px;
+  width:40%;
+  height:680px;
+  position: relative;
+}
+.nameCard{
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  overflow-y: scroll;
+}
+input{
+  width: 40px;
+}
+
+.btn-num{
+  width:100%
+}
+
+.btn-num:hover{
+  background-color: skyblue;
+  font-size: 130%;
+  transition: font-size 0.2s
+}
+
+.btn-num:focus{
+  /* background-color:green; */
+  border-color: green;
+  text-decoration: none
+}
+
+.detail-num{
+  width:50%;
+  margin-left: 50%;
+  position:relative;
+  height: 80%;
+}
+
+.btn-detail{
+  margin-top: 90%;
+  width:100%;
+  font-size: 200%;
+  border-radius: 5px;
+}
+
+.minmax{
+  margin-top: 50%
+}
