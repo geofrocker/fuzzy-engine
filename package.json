@@ -23,8 +23,8 @@
   },
   "scripts": {
     "killall": "killall node",
-    "start": "node ./src/api/api.js",
-    "heroku-postbuild": "react-scripts build",
+    "start": "nodemon './src/api/api.js'",
+    "build": "react-scripts build",
     "test": "react-scripts test --coverage -u",
     "eject": "react-scripts eject"
   },
@@ -37,5 +37,11 @@
       "!src/index.js"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

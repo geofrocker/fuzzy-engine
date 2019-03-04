@@ -58,7 +58,7 @@ class App extends Component {
   };
 
   getNums = debounce(async (limit = 10000, order = "none") => {
-    //this.setState({ active: false })
+    this.setState({ active: false })
     return axios.get(`/${limit}?order=${order}`).then(({ data }) => {
       if (!data) {
         return this.setState({ error: "An error occured" });
