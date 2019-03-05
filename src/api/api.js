@@ -8,7 +8,7 @@ const { fetchNumbers } = require("./utils");
 const config = require("../../config");
 
 const app = express();
-console.log(path.join(__dirname, "./../../build"))
+console.log(path.join(__dirname, "./../../build"));
 app.use(express.static(path.join(__dirname, "./../../build")));
 app.use(cors());
 app.use(bodyParser.json({ limit: "4mb" }));
@@ -47,12 +47,12 @@ app.get("/:limit", (req, res) => {
   res.status(200).send({ numbers });
 });
 
-app.get('*', (req,res) =>{
-	res.sendFile(path.join(__dirname+'./../../build/index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "./../../build/index.html"));
 });
 
 const port = 5000;
-app.listen(port);
+app.listen(process.env.PORT || port);
 
 console.log("App is listening on port " + port);
 
