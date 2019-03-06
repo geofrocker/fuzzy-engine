@@ -8,7 +8,6 @@ const { fetchNumbers } = require("./utils");
 const config = require("../../config");
 
 const app = express();
-console.log(path.join(process.env.PWD || __dirname, "build"));
 app.use(express.static(path.join(process.env.PWD || __dirname, "build")));
 app.use(cors());
 app.use(bodyParser.json({ limit: "4mb" }));

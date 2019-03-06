@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import React from "react";
-import NumCard from "../NumCard";
+import NumCard from "../App/NumCard";
 
 describe("<App />", () => {
   const props = {

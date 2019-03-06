@@ -2,6 +2,10 @@ const request = require("supertest");
 const app = require("../api");
 
 describe("Test the api.js", () => {
+  afterAll(async () => {
+    await new Promise(resolve => setTimeout(() => resolve(), 500));
+  });
+
   test("It should respond with unsorted numbers and a 200 if all is well", done => {
     request(app)
       .get("/:4?order=none")
@@ -58,4 +62,13 @@ describe("Test the api.js", () => {
         done();
       });
   });
+
+  // test("It should handle requests that are not in the defined endpoints properly", done => {
+  //   request(app)
+  //     .get("*")
+  //     .then(response => {
+  //       expect(response.statusCode).toBe(404);
+  //       done();
+  //     });
+  // });
 });
