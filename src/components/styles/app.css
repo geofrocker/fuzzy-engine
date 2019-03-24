@@ -8,7 +8,8 @@
   position: absolute;
   height: 80%;
   width: 49%;
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 input {
   width: 50px;
@@ -80,3 +81,11 @@ input {
 .actions {
   margin-top: 550px;
 }
+.hidden{
+  display:none;
+}
+
+.show{
+  display:inline;
+}
+
